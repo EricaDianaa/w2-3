@@ -154,28 +154,23 @@ const eyeColor={
   Utilizza uno switch statement per inserire uno ad uno gli oggetti dei personaggi di "starWarsCharacters" negli array relativi al colore degli occhi precedentemente creati.
   Ogni personaggio dovrà finire nell'array corrispondente al suo colore degli occhi (al valore della sua proprietà "eye_color").
 */
-for(let i=0; i<eyeColor.length;i++){
-  eyeColor.push(starWarsCharacters[i].names)
-
-switch(starWarsCharacters){
-  case eyeColor.blue:
-  eyeColor.blue.push(starWarsCharacters.names)
+for(let i=0; i<starWarsCharacters.length;i++){
+switch(starWarsCharacters[i].eye_color){
+  case "blue":
+  eyeColor.blue.push(starWarsCharacters[i])
   break
   case "yellow":
-    starWarsCharacters.eye_color==="yellow"
-    eyeColor.yellow.push(starWarsCharacters.names)
+    eyeColor.yellow.push(starWarsCharacters[i])
   break
   case "brown":
-    starWarsCharacters.eye_color==="brown"
-    eyeColor.brown.push(starWarsCharacters.names)
+    eyeColor.brown.push(starWarsCharacters[i])
   break 
   case "red":
-    starWarsCharacters.eye_color==="red"
-    eyeColor.red.push(starWarsCharacters.names)
+    eyeColor.red.push(starWarsCharacters[i])
   break
-  case "blue-gray":
-    starWarsCharacters.eye_color===eyeColor["blue-gray"]
-    eyeColor.blue-gray.push(starWarsCharacters.names)
+  //case "blue-gray":
+  //starWarsCharacters.eye_color===eyeColor["blue-gray"]
+ // eyeColor.blue-gray.push(starWarsCharacters.names)
 }
 }
 console.log(eyeColor)
@@ -187,11 +182,12 @@ console.log(eyeColor)
 
 
 let crewMass= 0
-while(starWarsCharacters.mass + starWarsCharacters.mass + crewMass ){
-   
-counter++
+let i=0
+while(i<starWarsCharacters.length){
+crewMass = crewMass + parseInt(starWarsCharacters[i].mass)
+i++
 } 
-console.log(starWarsCharacters.mass)
+console.log(crewMass)
 
 /* ESERCIZIO 7
   Crea uno switch statement per rivelare la tipologia di carico, utilizzando la massa totale, di un'impotetica astronave contenente i personaggi dell'array "starWarsCharacters"
@@ -211,9 +207,11 @@ console.log(starWarsCharacters.mass)
 */
 for(let i=0; i<starWarsCharacters.length;i++){
   if(starWarsCharacters[i].gender === "n/a"){
-    starWarsCharacters.splice(1,1,)
+    starWarsCharacters[i].gender="robot"
    
 }
+console.log(starWarsCharacters
+  )
 }
 /* --EXTRA-- ESERCIZIO 9
   Utilizzando gli elementi presenti nell'array "femaleCharacters" rimuovi dall'array "characters" le stringhe corrispondenti a personaggi con lo stesso nome.
