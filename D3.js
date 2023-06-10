@@ -105,10 +105,7 @@ const starWarsCharacters = [
 /* ESERCIZIO 1
   Crea una variabile chiamata "characters" e assegnale un array vuoto
 */
-const characters=[
-  
-]
-
+const characters=[]
 
 
 /* ESERCIZIO 2
@@ -187,7 +184,7 @@ while(i<starWarsCharacters.length){
 crewMass = crewMass + parseInt(starWarsCharacters[i].mass)
 i++
 } 
-console.log(crewMass)
+console.log("crewmass",crewMass)
 
 /* ESERCIZIO 7
   Crea uno switch statement per rivelare la tipologia di carico, utilizzando la massa totale, di un'impotetica astronave contenente i personaggi dell'array "starWarsCharacters"
@@ -202,6 +199,24 @@ console.log(crewMass)
   Una volta fatto, modifica la massa di qualche elemento dell'equipaggio e vedi se riesci ad ottenere un messaggio diverso.
 */
 
+switch(true) {
+  case crewMass < 500:
+  console.log("Ship is under loaded")
+  break
+  case crewMass === 500:
+    console.log("Ship is half loaded")
+  break
+  case crewMass > 700 && crewMass <= 900:
+    console.log("Warning: Load is over 700")
+  break 
+  case crewMass > 900 && crewMass <= 1000:
+    console.log("Critical Load: Over 900")
+  break
+  case crewMass > 1000:
+    console.log("DANGER! OVERLOAD ALERT: escape from ship now!")
+    break
+}
+
 /* ESERCIZIO 8
   Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" (Tip: puoi effettuare la riassegnazione del valore corrispondente o creare un nuovo array)
 */
@@ -210,8 +225,7 @@ for(let i=0; i<starWarsCharacters.length;i++){
     starWarsCharacters[i].gender="robot"
    
 }
-console.log(starWarsCharacters
-  )
+console.log(starWarsCharacters)
 }
 /* --EXTRA-- ESERCIZIO 9
   Utilizzando gli elementi presenti nell'array "femaleCharacters" rimuovi dall'array "characters" le stringhe corrispondenti a personaggi con lo stesso nome.
@@ -221,7 +235,18 @@ console.log(starWarsCharacters
 
   Una volta fatto crea un console.log per controllare la proprietà length di "characters" prima e dopo l'operazione.
 */
+for(let i=0; i<femaleCharacters.length;i++){
+  for(let x=0; x<characters.length;i++){
+    
+
+  }
+}
+
 
 /* --EXTRA-- ESERCIZIO 10
   Crea una funzionalità che prenda un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
 */
+const randomIndex = Math.floor(Math.random() * starWarsCharacters.length)
+const selectedCharacter = starWarsCharacters[randomIndex]
+
+console.log('The found character name is:', selectedCharacter.names)
